@@ -1,9 +1,7 @@
 package ru.netology.delivery.test;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -44,6 +42,7 @@ public class ReplanMeetingTest {
     @Epic(value = "Услуги банка")
     @Feature(value= "Функционал для перепланирования встречи")
     @Story("Успешное перепланирование встречи")
+    @Severity(value = SeverityLevel.NORMAL)
     @Test
     void shouldSuccessfulPlanAndReplanMeeting() {
         $("[data-test-id=city] .input__control").setValue(validUser.getCity());
